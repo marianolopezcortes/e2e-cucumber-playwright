@@ -1,0 +1,14 @@
+{
+    "TARGET_URL": "https://the-internet.herokuapp.com/add_remove_elements/",
+    "HEADLESS": false,
+    "DRY_RUN": false,
+    "CUCUMBER_TAGS": "",
+    "CUCUMBER_WORKERS": 1,
+    "USER": "",
+    "JENKINS_LINK": null,
+    "RP_ENABLED": true,
+    "RP_ENDPOINT": "URL",
+    "RP_TOKEN": "token",
+    "RP_LAUNCH": "My launch",
+    "RP_DESCRIPTION": "My awesome description"
+}

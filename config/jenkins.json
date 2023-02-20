@@ -1,0 +1,4 @@
+{
+    "HEADLESS": true,
+    "REPORTER": "allure"
+}

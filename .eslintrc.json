@@ -1,0 +1,52 @@
+{
+    "env": {
+        "browser": false,
+        "es2016": true
+    },
+    "extends": [
+        "google", "prettier", "plugin:playwright/playwright-test"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "plugins": [
+         "@typescript-eslint", 
+         "prettier",  
+         "prefer-arrow", 
+         "check-file", 
+         "unused-imports"
+    ], 
+    "rules": {
+       "no-unused-vars": ["error", { "vars": "all", "args": "all", "argsIgnorePattern": "this" }],
+       "prettier/prettier": "warn", 
+       "require-jsdoc": "off", 
+       "new-cap": "off", 
+       "valid-jsdoc": "warn", 
+       "unused-imports/no-unused-imports": "error",
+       "prefer-arrow/prefer-arrow-functions": [
+            "warn",
+            {
+                "disallowPrototype": true,
+                "singleReturnOnly": false,
+                "classPropertiesAllowed": false
+            }
+        ], 
+        // "check-file/filename-naming-convention": [
+        //     "warn",
+        //     {
+        //       "**/*.{js,ts}": "KEBAB_CASE"
+        //     }
+        // ], 
+        "check-file/folder-naming-convention": [
+            "warn",
+            {
+              "**": "KEBAB_CASE"
+            }
+        ], 
+        "@typescript-eslint/no-floating-promises": "warn", 
+        "no-return-await": "warn",
+        "complexity": ["warn", { "max": 5 }]
+    }, 
+    "ignorePatterns": ["node_modules/**"]
+}
