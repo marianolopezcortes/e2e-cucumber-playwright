@@ -2,7 +2,7 @@
     "TARGET_URL": "https://the-internet.herokuapp.com/add_remove_elements/",
     "HEADLESS": false,
     "DRY_RUN": false,
-    "CUCUMBER_TAGS": "",
+    "CUCUMBER_TAGS": "@test",
     "CUCUMBER_WORKERS": 1,
     "USER": "",
     "JENKINS_LINK": null,

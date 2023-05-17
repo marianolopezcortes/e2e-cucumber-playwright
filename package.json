@@ -16,7 +16,7 @@
         "@cucumber/cucumber": "^8.10.0",
         "@cucumber/pretty-formatter": "^1.0.0",
         "@playwright/test": "^1.29.2",
-        "@reportportal/agent-js-cucumber": "^5.1.1",
+        "@reportportal/agent-js-cucumber": "^5.2.1",
         "@types/node": "^18.11.18",
         "@typescript-eslint/eslint-plugin": "^5.49.0",
         "@typescript-eslint/parser": "^5.49.0",

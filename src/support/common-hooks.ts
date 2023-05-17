@@ -39,7 +39,7 @@ Before({ timeout: -1 }, async function (this: CustomWorld) {
 });
 
 After(
-    { timeout: -1 },
+    { timeout: -1, tags: "not @unstable" },
     async function (this: CustomWorld, testCase: ITestCaseHookParameter) {
         if (testCase.result?.status !== Status.PASSED) {
             await saveScreenshot.apply(this);
@@ -51,7 +51,7 @@ After(
         if (testCase.result?.status !== Status.PASSED) {
             const videoPath = await this.page!.video()?.path();
             const videobuffer = fs.readFileSync(videoPath!, "base64");
-            await this.attach(videobuffer!, "base64:video/webm");
+            this.attach(videobuffer!, "base64:video/webm");
         }
         if (
             testCase.result?.status !== Status.FAILED ||
@@ -62,6 +62,14 @@ After(
         }
     }
 );
+After(async function (this: CustomWorld, testCase: ITestCaseHookParameter) {
+    if (
+        testCase.result?.status === Status.SKIPPED &&
+        this.setLaunchStatusSkipped
+    ) {
+        await this.setLaunchStatusSkipped();
+    }
+});
 
 const saveScreenshot = async function (this: CustomWorld) {
     const buffer = (await this.page!.screenshot())?.toString("base64");

@@ -13,7 +13,8 @@ export type CustomWorld = {
 
     targetUrl?: string;
     headless?: boolean;
-} & World;
+} & World &
+    typeof RPWorld;
 
 if (Config.RP_ENABLED) {
     setWorldConstructor(RPWorld);
